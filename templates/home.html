@@ -7,7 +7,7 @@
    <body>
     <div class="nav">
         <header><nav>
-            <img src="{{ url_for('static', filename='pictures/logo.png') }}" alt="Logo" width="35" height="35">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" width="35" height="35">
             <a href="#hero">Home</a>
             <a href="#about">About</a>
             <a href="#ksills">Skill</a>
@@ -85,6 +85,6 @@
     <footer>
          <p>© 2025 Kunal Marchande | Made with ❤️ and Flask</p>
     </footer>
-
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
    </body>
 </html>
