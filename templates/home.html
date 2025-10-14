@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Portfolio</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+   </head>
+   <body>
+    <div class="nav">
+        <header><nav>
+            <img src="{{ url_for('static', filename='pictures/logo.png') }}" alt="Logo" width="35" height="35">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#ksills">Skill</a>
+            <a href="#projects">Projects</a>
+            <a href="#CV">Download CV</a>
+            <a href="#contact">Connect</a>
+            <br>
+            <br>
+        </nav></header>
+    </div>
+    
+        <section id="hero">
+            <h1>Hi, I'm <span style="color:#00bcd4;">Kunal Marchande</span></h1>
+            <h2>A Passionate Full-Stack Developer 👨‍💻</h2>
+            <p>I build modern, responsive, and scalable web applications using Python, Flask, and .NET. I love solving real-world problems through clean code and creative design.</p>
+            <a href="#projects" class="btn">View My Work</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm a Computer Science student with a love for coding, creativity, and continuous learning. I enjoy building full-stack web applications, experimenting with new technologies, and collaborating with others to turn ideas into reality.</p>
+            <p>When I’m not coding, you’ll find me helping friends with their projects or exploring new frameworks.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Tech Stack</h2>
+            <ul>
+                <li>💡 Frontend: HTML, CSS, JavaScript, React</li>
+                <li>⚙️ Backend: Python (Flask, Django), C#, ASP.NET</li>
+                <li>🗄️ Database: MySQL, SQLite</li>
+                <li>🧰 Tools: Git, VS Code, Postman, Docker</li>
+                <li>☁️ Other: Linux, APIs, Cloud basics</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+          <h2>Projects</h2>
+        
+          <div class="project">
+            <h3>🎵 Spotify Clone</h3>
+            <p>A Python-based Spotify clone that integrates with YouTube API to search and stream songs dynamically.        </p>
+            <a href="https://github.com/yourusername/spotify-clone" target="_blank">View on GitHub</a>
+          </div>
+      
+          <div class="project">
+            <h3>😊 Emotion Detection Web App</h3>
+            <p>Built with Flask and OpenCV — detects facial emotions in real-time and interacts with a chatbot.</p>
+            <a href="https://github.com/yourusername/emotion-ai-chatbot" target="_blank">View on GitHub</a>
+          </div>
+      
+          <div class="project">
+            <h3>💼 Portfolio Website</h3>
+            <p>This very site! Designed using Flask, HTML, and CSS — showcasing my work and personality.</p>
+            <a href="#">Live Demo</a>
+          </div>
+        </section>
+
+
+        <section id="contact">
+          <h2>Let's Connect</h2>
+          <p>Got an idea, project, or just want to say hi? I’d love to collaborate!</p>
+        
+          <ul>
+            <li>📧 Email: <a href="mailto:kunalmarchande@example.com">kunalmarchande@example.com</a></li>
+            <li>🌐 GitHub: <a href="https://github.com/kunalmarchande" target="_blank">github.com/kunalmarchande</a></li>
+            <li>💼 LinkedIn: <a href="https://linkedin.com/in/kunalmarchande" target="_blank">linkedin.com/in/      kunalmarchande</a></li>
+          </ul>
+        </section>
+
+        <section id="CV">
+            <a href="">Download CV</a>
+        </section>
+
+    <footer>
+         <p>© 2025 Kunal Marchande | Made with ❤️ and Flask</p>
+    </footer>
+
+   </body>
+</html>
