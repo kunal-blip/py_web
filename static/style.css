@@ -71,12 +71,20 @@ header img{
   /* background-color: #b5baba; */
 }
 
-#hero{
-  background-image: url("{{ url_for('static', filename='pictures/section.jpg') }}");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.home {
+  background-image: url("pictures/section.jpg");;
+  background-size: cover;           /* scales image to fill container */
+  background-position: center;      /* centers the image */
+  background-repeat: no-repeat;     /* prevents tiling */
+  height: 100vh;                    /* full viewport height */
+  width: 100%;  
+  z-index: -12;
   padding: 100px 20px;
-  color: #231f1f; /* optional for contrast */
+  color: #c9b6b6; /* optional for contrast */
+  text-align: center;
+}
+
+
+footer{
   text-align: center;
 }
