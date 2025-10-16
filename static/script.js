@@ -140,4 +140,54 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   window.removeEventListener('scroll', () => {});
 }
 
+// ============================================
+// Logo Modal - Instagram Style Viewer
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+  const logoImg = document.querySelector('header nav img');
+  
+  if (logoImg) {
+    // Create modal structure
+    const modal = document.createElement('div');
+    modal.className = 'logo-modal';
+    modal.innerHTML = `
+      <div class="logo-modal-content">
+        <div class="logo-modal-close">×</div>
+        <img src="${logoImg.src}" alt="Logo">
+      </div>
+    `;
+    document.body.appendChild(modal);
+    
+    // Open modal on logo hover/click
+    logoImg.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    });
+    
+    // Close modal on close button click
+    const closeBtn = modal.querySelector('.logo-modal-close');
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('active');
+      document.body.style.overflow = ''; // Restore scrolling
+    });
+    
+    // Close modal on background click
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+    
+    // Close modal on ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+});
+
 console.log('Portfolio interactions loaded successfully! 🚀');
