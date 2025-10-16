@@ -1,6 +1,3 @@
-// ============================================
-// Navigation Scroll Effect
-// ============================================
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('.nav');
   if (window.scrollY > 100) {
@@ -10,9 +7,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// ============================================
-// Smooth Scroll Spy - Active Navigation
-// ============================================
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('header nav a[href^="#"]');
 
@@ -38,9 +32,6 @@ function activateNavLink() {
 
 window.addEventListener('scroll', activateNavLink);
 
-// ============================================
-// Intersection Observer for Fade-in Animations
-// ============================================
 const observerOptions = {
   threshold: 0.15,
   rootMargin: '0px 0px -100px 0px'
@@ -59,9 +50,6 @@ sections.forEach(section => {
   observer.observe(section);
 });
 
-// ============================================
-// Smooth Scrolling for Navigation Links
-// ============================================
 navLinks.forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
@@ -78,9 +66,6 @@ navLinks.forEach(link => {
   });
 });
 
-// ============================================
-// Parallax Effect for Hero Section
-// ============================================
 window.addEventListener('scroll', () => {
   const hero = document.querySelector('#hero');
   if (hero) {
@@ -90,9 +75,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// ============================================
-// Add Animation Delays to Project Cards
-// ============================================
 document.addEventListener('DOMContentLoaded', () => {
   const projects = document.querySelectorAll('.project');
   projects.forEach((project, index) => {
@@ -105,9 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// ============================================
-// Typing Effect for Hero Heading (Optional Enhancement)
-// ============================================
 function typeWriter(element, text, speed = 100) {
   let i = 0;
   element.innerHTML = '';
@@ -132,62 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// ============================================
-// Reduced Motion Preference
-// ============================================
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   // Disable parallax and other motion effects
   window.removeEventListener('scroll', () => {});
 }
-
-// ============================================
-// Logo Modal - Instagram Style Viewer
-// ============================================
-document.addEventListener('DOMContentLoaded', () => {
-  const logoImg = document.querySelector('header nav img');
-  
-  if (logoImg) {
-    // Create modal structure
-    const modal = document.createElement('div');
-    modal.className = 'logo-modal';
-    modal.innerHTML = `
-      <div class="logo-modal-content">
-        <div class="logo-modal-close">×</div>
-        <img src="${logoImg.src}" alt="Logo">
-      </div>
-    `;
-    document.body.appendChild(modal);
-    
-    // Open modal on logo hover/click
-    logoImg.addEventListener('click', (e) => {
-      e.preventDefault();
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden'; // Prevent scrolling
-    });
-    
-    // Close modal on close button click
-    const closeBtn = modal.querySelector('.logo-modal-close');
-    closeBtn.addEventListener('click', () => {
-      modal.classList.remove('active');
-      document.body.style.overflow = ''; // Restore scrolling
-    });
-    
-    // Close modal on background click
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    });
-    
-    // Close modal on ESC key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modal.classList.contains('active')) {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    });
-  }
-});
 
 console.log('Portfolio interactions loaded successfully! 🚀');
