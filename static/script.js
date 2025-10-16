@@ -124,13 +124,13 @@ function typeWriter(element, text, speed = 100) {
 }
 
 // Uncomment to enable typing effect
-// document.addEventListener('DOMContentLoaded', () => {
-//   const nameElement = document.querySelector('#hero h1 span');
-//   if (nameElement) {
-//     const originalText = nameElement.textContent;
-//     typeWriter(nameElement, originalText, 80);
-//   }
-// });
+document.addEventListener('DOMContentLoaded', () => {
+  const nameElement = document.querySelector('#hero h1 span');
+  if (nameElement) {
+    const originalText = nameElement.textContent;
+    typeWriter(nameElement, originalText, 80);
+  }
+});
 
 // ============================================
 // Reduced Motion Preference
