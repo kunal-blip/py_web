@@ -1,2 +1,1 @@
-this file will contain the 
-trial of web development with python 
+This is a personal portfolio website for Kunal Marchande, showcasing his skills as a full-stack developer. It features a responsive single-page layout with dynamic sections, smooth animations, and a downloadable resume. Built using HTML, CSS, and JavaScript, the site was originally templated with Flask for local development but is now structured for static hosting. The project is version-controlled with Git and hosted via GitHub Pages, making it easy to view, clone, or deploy.
